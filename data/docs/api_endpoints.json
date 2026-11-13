@@ -1,0 +1,14 @@
+{
+  "endpoints": [
+    {"service": "billing-service", "method": "POST", "path": "/v1/invoices", "description": "Create a new invoice for a customer", "auth": "Bearer JWT, scope billing:write"},
+    {"service": "billing-service", "method": "GET", "path": "/v1/invoices/{id}", "description": "Fetch one invoice by id", "auth": "Bearer JWT, scope billing:read"},
+    {"service": "billing-service", "method": "POST", "path": "/v1/invoices/{id}/void", "description": "Void an unpaid invoice", "auth": "Bearer JWT, scope billing:write"},
+    {"service": "payments-gateway", "method": "POST", "path": "/v1/payments", "description": "Charge a customer's payment method", "auth": "Bearer JWT, scope payments:write", "rate_limit": "100 requests per minute per API key"},
+    {"service": "payments-gateway", "method": "POST", "path": "/v1/refunds", "description": "Refund a completed payment, fully or partially", "auth": "Bearer JWT, scope payments:write"},
+    {"service": "ledger-service", "method": "GET", "path": "/v1/accounts/{id}/balance", "description": "Return the current ledger balance of an account", "auth": "Bearer JWT, scope ledger:read"},
+    {"service": "auth-service", "method": "POST", "path": "/v1/token", "description": "Exchange client credentials for an access token valid for 15 minutes", "auth": "Client credentials"},
+    {"service": "auth-service", "method": "POST", "path": "/v1/token/refresh", "description": "Exchange a refresh token for a new access token", "auth": "Refresh token"},
+    {"service": "notification-service", "method": "POST", "path": "/v1/notifications", "description": "Queue an email or SMS notification", "auth": "Service-to-service token"},
+    {"service": "reporting-service", "method": "GET", "path": "/v1/reports/daily-settlement", "description": "Download the daily settlement report as CSV", "auth": "Bearer JWT, scope reports:read"}
+  ]
+}

@@ -1,0 +1,7 @@
+team,lead,slack_channel,email
+Payments Team,Aarav Khanna,#team-payments,payments@meridianlabs.example
+Platform Team,Meera Nair,#team-platform,platform@meridianlabs.example
+Identity Team,Rohan Sethi,#team-identity,identity@meridianlabs.example
+Core Finance Team,Ishita Rao,#team-core-finance,corefinance@meridianlabs.example
+Data Team,Kabir Malhotra,#team-data,data@meridianlabs.example
+Frontend Team,Ananya Bose,#team-frontend,frontend@meridianlabs.example

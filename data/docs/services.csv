@@ -1,0 +1,9 @@
+service,owner_team,repo_path,language,tier,port,oncall_slack
+api-gateway,Platform Team,meridian-platform/services/api-gateway,Envoy config,Tier 1,8080,#oncall-platform
+billing-service,Payments Team,meridian-platform/services/billing,Python (FastAPI),Tier 1,8081,#oncall-payments
+payments-gateway,Payments Team,meridian-platform/services/payments-gateway,Go (chi),Tier 1,8082,#oncall-payments
+ledger-service,Core Finance Team,meridian-platform/services/ledger,Go (chi),Tier 1,8083,#oncall-finance
+auth-service,Identity Team,meridian-platform/services/auth,TypeScript (Express),Tier 1,8084,#oncall-identity
+notification-service,Platform Team,meridian-platform/services/notification,Python (FastAPI),Tier 2,8085,#oncall-platform
+reporting-service,Data Team,meridian-platform/services/reporting,Python (FastAPI),Tier 3,8086,#oncall-data
+web-app,Frontend Team,meridian-platform/apps/web,React (TypeScript),Tier 2,3000,#oncall-frontend
